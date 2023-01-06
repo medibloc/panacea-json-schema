@@ -15,4 +15,6 @@ Before pushing your changes to this repository, you can validate your JSON schem
 
 This repository is published as https://jsonschema.gopanacea.org or http://jsonschema.gopanacea.org.
 
-For that deployment, the Panacea team uses AWS S3. Please contact the Panacea team if you want to deploy your changes officially.
+For that deployment, the Panacea team uses AWS S3.
+Currently, automatic deployment is not configured yet.
+Please contact the Panacea team if you want to deploy your changes officially.
