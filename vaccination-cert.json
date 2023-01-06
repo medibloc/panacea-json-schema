@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "Root Schema",
+  "required": [
+    "certificateID",
+    "beneficiaryDetails",
+    "vaccinationDetails",
+    "issuer"
+  ],
+  "properties": {
+    "certificateID": {
+      "type": "string",
+      "title": "The certificateID Schema",
+      "examples": [
+        "8907125097"
+      ]
+    },
+    "beneficiaryDetails": {
+      "type": "object",
+      "title": "The beneficiaryDetails Schema",
+      "required": [
+        "beneficiaryName",
+        "dateOfBirth",
+        "passportNumber"
+      ],
+      "properties": {
+        "beneficiaryName": {
+          "type": "string",
+          "title": "The beneficiaryName Schema",
+          "examples": [
+            "John Constantine"
+          ]
+        },
+        "dateOfBirth": {
+          "type": "string",
+          "format": "date",
+          "title": "The dateOfBirth Schema",
+          "examples": [
+            "1988-10-10"
+          ]
+        },
+        "passportNumber": {
+          "type": "string",
+          "title": "The passportNumber Schema",
+          "examples": [
+            "123456789"
+          ]
+        }
+      },
+      "examples": [{
+        "beneficiaryName": "John Constantine",
+        "dateOfBirth": "1988-10-10",
+        "passportNumber": "123456789"
+      }]
+    },
+    "vaccinationDetails": {
+      "type": "object",
+      "title": "The vaccinationDetails Schema",
+      "required": [
+        "vaccineName",
+        "vaccineType",
+        "manufacturer",
+        "datetimeOfDose"
+      ],
+      "properties": {
+        "vaccineName": {
+          "type": "string",
+          "title": "The vaccineName Schema",
+          "examples": [
+            "BioNTech"
+          ]
+        },
+        "vaccineType": {
+          "type": "string",
+          "title": "The vaccineType Schema",
+          "examples": [
+            "COVID-19"
+          ]
+        },
+        "manufacturer": {
+          "type": "string",
+          "title": "The manufacturer Schema",
+          "examples": [
+            "Pfizer"
+          ]
+        },
+        "datetimeOfDose": {
+          "type": "string",
+          "format": "date-time",
+          "title": "The datetimeOfDose Schema",
+          "examples": [
+            "2022-10-12T20:20:39+09:00"
+          ]
+        },
+        "roundOfDose": {
+          "type": "integer",
+          "title": "The roundOfDose Schema",
+          "examples": [
+            1
+          ]
+        }
+      },
+      "examples": [{
+        "vaccineName": "BioNTech",
+        "vaccineType": "COVID-19",
+        "manufacturer": "Pfizer",
+        "datetimeOfDose": "2022-10-12T20:20:39+09:00",
+        "roundOfDose": 1
+      }]
+    },
+    "issuer": {
+      "type": "object",
+      "title": "The issuer Schema",
+      "required": [
+        "name",
+        "proof"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "The name Schema",
+          "examples": [
+            "Korean Unofficial Hospital"
+          ]
+        },
+        "proof": {
+          "type": "string",
+          "title": "The proof Schema",
+          "examples": [
+            "abcdefghijk"
+          ]
+        }
+      },
+      "examples": [{
+        "name": "Korean Unofficial Hospital",
+        "proof": "abcdefghijk"
+      }]
+    }
+  },
+  "examples": [{
+    "certificateID": "8907125097",
+    "beneficiaryDetails": {
+      "beneficiaryName": "John Constantine",
+      "dateOfBirth": "1988-10-10",
+      "passportNumber": "123456789"
+    },
+    "vaccinationDetails": {
+      "vaccineName": "BioNTech",
+      "vaccineType": "COVID-19",
+      "manufacturer": "Pfizer",
+      "datetimeOfDose": "2022-10-12T20:20:39+09:00",
+      "roundOfDose": 1
+    },
+    "issuer": {
+      "name": "Korean Unofficial Hospital",
+      "proof": "abcdefghijk"
+    }
+  }]
+}
